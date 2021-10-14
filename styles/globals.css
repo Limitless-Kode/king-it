@@ -14,3 +14,30 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.search{
+  @apply bg-gray-100 rounded flex justify-center items-center overflow-hidden;
+}
+.button{
+  @apply outline-none bg-[#FE65BC] text-white w-[200px] h-[50px] mx-[10px] rounded flex justify-center items-center;
+}
+
+.button-round{
+  @apply outline-none bg-[#FE65BC] text-white w-[45px] h-[45px] mx-[10px] text-lg rounded-full flex justify-center items-center;
+}
+
+.switch{
+  @apply h-[30px] w-[55px] bg-gray-100 rounded-full cursor-pointer flex items-center px-1 transition-all duration-500;
+}
+
+.switch_button{
+  @apply h-[25px] w-[25px] bg-[#FE65BC] rounded-full duration-500 flex justify-center items-center text-white text-xs;
+}
+
+.progressIndicator{
+  @apply fixed bottom-0 m-auto h-[20px] bg-green-600 w-[20px];
+}
