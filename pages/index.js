@@ -21,7 +21,7 @@ export default function Home() {
 
     setfetchingMedia(true);
     // 
-    const request = await fetch('http://172.20.10.3:8080/getImage', {
+    const request = await fetch('http://92.205.23.92:8080/getImage', {
       method: "POST",
       body: JSON.stringify({ "url": url }),
       headers: {
@@ -40,7 +40,7 @@ export default function Home() {
 
     setfetchingMedia(true);
     // 
-    const request = await fetch('http://172.20.10.3:8080/getVideo', {
+    const request = await fetch('http://92.205.23.92:8080/getVideo', {
       method: "POST",
       body: JSON.stringify({ "url": url }),
       headers: {
