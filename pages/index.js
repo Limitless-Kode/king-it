@@ -166,7 +166,7 @@ export default function Home() {
             : <div></div>
         }
 
-        <ProgressIndicator />
+        {/* <ProgressIndicator /> */}
 
       </main>
     </div>
