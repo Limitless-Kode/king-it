@@ -20,8 +20,9 @@ export default function Home() {
     if(mediaUrl.trim() == "") return;
 
     setfetchingMedia(true);
-    // 
-    const request = await fetch('http://92.205.23.92:8080/getImage', {
+
+
+    const request = await fetch('/api/media/getImage', {
       method: "POST",
       body: JSON.stringify({ "url": url }),
       headers: {
@@ -29,7 +30,7 @@ export default function Home() {
       }
     });
     const response = await request.json();
-    console.log(response['media']);
+    console.log(response);
     setimageFiles(response['media']);
     setfetchingMedia(false);
   }
@@ -40,7 +41,7 @@ export default function Home() {
 
     setfetchingMedia(true);
     // 
-    const request = await fetch('http://92.205.23.92:8080/getVideo', {
+    const request = await fetch('/api/media/getVideo', {
       method: "POST",
       body: JSON.stringify({ "url": url }),
       headers: {
