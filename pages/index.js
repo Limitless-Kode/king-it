@@ -176,7 +176,7 @@ export default function Home() {
             <div className="p-12 flex flex-wrap gap-5 justify-center">
             {
                   imageFiles.map(url =>
-                      <div className="relative h-[30vh] w-[25vw] bg-red-400 rounded overflow-hidden" key={url}>
+                      <div className="relative h-[30vh] w-[80vw] sm:w-[25vw] bg-red-400 rounded overflow-hidden" key={url}>
                         <Image src={url} alt="Image" className="object-cover pointer-events-none" layout="fill" />
                         <button onClick={() => download(url)} className="button-round absolute bottom-3 right-2">
                           <AiOutlineCloudDownload />
