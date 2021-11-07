@@ -114,7 +114,7 @@ export default function Home() {
 
     const link = document.createElement('a');
     link.href = fileURL;
-    link.download = 'kingschat-downloader-' + new Date().getTime();
+    link.download = 'kingschat-downloader-' + new Date().getTime() + (isVideo ? 'mp4' : 'jpg');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
