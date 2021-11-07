@@ -23,6 +23,8 @@ export default function Home() {
       const postArray = url.split("/");
       const postId = postArray[postArray.length - 1];
 
+      console.log(postId);
+
       url = `https://kingschat.online/post/${postId}`;
     }
 
@@ -50,11 +52,23 @@ export default function Home() {
   }
 
   const fetchVideo = async (url) => {
-    setimageFiles([]);
+    
+    const isMobileURL = url.search("kingsch.at");
+    
+    if (isMobileURL >= 0) {
+      const postArray = url.split("/");
+      const postId = postArray[postArray.length - 1];
+      
+      console.log(postId);
+      
+      url = `https://kingschat.online/post/${postId}`;
+    }
+    
     if (!(url.startsWith('https://') || url.startsWith('http://'))) {
       url = `https://${url}`;
     }
-
+    
+    setimageFiles([]);
     if(mediaUrl.trim() == "") return;
 
     setfetchingMedia(true);
