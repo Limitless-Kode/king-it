@@ -176,7 +176,7 @@ export default function Home() {
             <div className="p-12 flex flex-wrap gap-5 justify-center">
             {
                   imageFiles.map(url =>
-                      <div className="relative h-[30vh] w-[90vw] sm:w-[25vw] bg-red-400 rounded overflow-hidden" key={url}>
+                      <div className="relative h-[30vh] w-[95vw] sm:w-[25vw] bg-red-400 rounded overflow-hidden" key={url}>
                         <Image src={url} alt="Image" className="object-cover pointer-events-none" layout="fill" />
                         <button onClick={() => download(url)} className="button-round absolute bottom-3 right-2">
                           <AiOutlineCloudDownload />
@@ -193,8 +193,8 @@ export default function Home() {
             <div className="p-12 flex flex-wrap gap-5 justify-center">
             {
                   videoFiles.map(url =>
-                      <div className="relative sm:h-[60vh] sm:w-[60vw] w-[80vw] h-[38vh]  bg-black rounded overflow-hidden flx justify-center items-center" key={url}>
-                        <video src={url} alt="Image" className="object-cover h-[60vh] m-auto" layout="fill" controls/>
+                      <div className="relative sm:h-[60vh] sm:w-[60vw] w-[95vw] h-[35vh]  bg-black rounded overflow-hidden flx justify-center items-center" key={url}>
+                        <video src={url} alt="Video" className="object-cover sm:h-[60vh] h-[35] m-auto" layout="fill" controls/>
                         <button onClick={() => download(url)} className="button-round absolute top-3 right-2">
                           <AiOutlineCloudDownload />
                         </button>
