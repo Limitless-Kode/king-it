@@ -23,7 +23,7 @@ export default function Home() {
       const postArray = url.split("/");
       const postId = postArray[postArray.length - 1];
 
-      console.log(postId);
+      // console.log(postId);
 
       url = `https://kingschat.online/post/${postId}`;
     }
@@ -46,7 +46,7 @@ export default function Home() {
       }
     });
     const response = await request.json();
-    console.log(response);
+    // console.log(response);
     setimageFiles(response['media']);
     setfetchingMedia(false);
   }
@@ -59,7 +59,7 @@ export default function Home() {
       const postArray = url.split("/");
       const postId = postArray[postArray.length - 1];
       
-      console.log(postId);
+      // console.log(postId);
       
       url = `https://kingschat.online/post/${postId}`;
     }
