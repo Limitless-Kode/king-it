@@ -193,7 +193,7 @@ export default function Home() {
             <div className="p-12 flex flex-wrap gap-5 justify-center">
             {
                   videoFiles.map(url =>
-                      <div className="relative h-[60vh] w-[60vw] bg-black rounded overflow-hidden flx justify-center items-center" key={url}>
+                      <div className="relative sm:h-[60vh] sm:w-[60vw] w-[80vw] h-[38vh]  bg-black rounded overflow-hidden flx justify-center items-center" key={url}>
                         <video src={url} alt="Image" className="object-cover h-[60vh] m-auto" layout="fill" controls/>
                         <button onClick={() => download(url)} className="button-round absolute top-3 right-2">
                           <AiOutlineCloudDownload />
