@@ -43,7 +43,7 @@ export default function Home() {
     if (!(url.startsWith('https://') || url.startsWith('http://'))) {
       url = `https://${url}`;
     }
-    
+
     if(mediaUrl.trim() == "") return;
 
     setfetchingMedia(true);
@@ -118,7 +118,16 @@ export default function Home() {
                 <p className="sm:text-sm text-xs text-gray-50 mb-8 mt-3">
                   The first of it&apos;s kind online tool that unlocks the possibility to download beautiful images and
                   videos from KingsChat and Yookos into your gallery and enjoy them offline.
-                </p>
+            </p>
+            
+             <div className={`switch mt-3 ${isVideo ? 'justify-end' : 'justify-start'}`} onClick={()=> setIsVideo(!isVideo)}>
+              <div className="switch_button">
+                {isVideo ? <HiOutlineVideoCamera /> : <BsImages />}
+              </div>
+            </div>
+            <div className="text-white text-left mt-1 text-sm">
+              <p>Please switch to the file type you want to download.</p>
+            </div>
             
             <div className="search">
               <input onChange={(evt) => setmediaUrl(evt.target.value)} value="https://" placeholder="Paste Link" className="text-gray-800 bg-transparent p-5 px-8 outline-none w-full" />
@@ -128,14 +137,7 @@ export default function Home() {
             </div>
 
             
-            <div className={`switch mt-3 ${isVideo ? 'justify-end' : 'justify-start'}`} onClick={()=> setIsVideo(!isVideo)}>
-              <div className="switch_button">
-                {isVideo ? <HiOutlineVideoCamera /> : <BsImages />}
-              </div>
-            </div>
-            <div className="text-white text-left mt-1 text-sm">
-              <p>Please switch to the file type you want to download.</p>
-            </div>
+           
             
         </div>
         </div>
