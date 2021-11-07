@@ -125,7 +125,7 @@ export default function Home() {
     <div className="">
       <Head>
         <title>KingsChat Downloader</title>
-        <meta name="description" content="The first of it's kind online tool that unlocks the possibility to download beautiful images and videos from KingsChat and Yookos into your gallery and enjoy them offline." />
+        <meta name="description" content="The first of it's kind online tool that unlocks the possibility to download beautiful images and videos from KingsChat into your gallery and enjoy them offline." />
         <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -135,14 +135,14 @@ export default function Home() {
           <div className="navigation absolute top-3 left-3">
             <div><Image src={require("/public/images/logo.png")} height="60px" width="60" alt="Alt"/></div>
             </div>
-            <div className="w-6/12">
-                <h1 className="text-gray-50 md:text-4xl text-xl font-bold mb-5 uppercase">
-                  Download Kingschat And Yookos Videos And Images Faster.
+            <div className="w-10/12 sm:w-6/12">
+                <h1 className="text-gray-50 text-xl sm:text-4xl font-bold mb-5 uppercase">
+                  Download Kingschat Videos And Images Faster.
                 </h1>
 
-                <p className="sm:text-md text-lg text-gray-50 mb-12 mt-3">
+                <p className="text-sm sm:text-lg text-gray-50 mb-12 mt-3">
                   The first of it&apos;s kind online tool that unlocks the possibility to download beautiful images and
-                  videos from KingsChat and Yookos into your gallery and enjoy them offline.
+                  videos from KingsChat into your gallery and enjoy them offline.
             </p>
             
             <div className="flex items-center mb-4">
@@ -151,14 +151,15 @@ export default function Home() {
                   {isVideo ? <HiOutlineVideoCamera /> : <BsImages />}
                 </div>
               </div>
-              <p className="text-white text-sm">Please switch to the file type you want to download.</p>
+              <p className="text-white text-xs text-left">Please switch to the file type you want to download.</p>
             </div>
             {/* <div className="text-white text-left mt-1 text-sm">
               <p>Please switch to the file type you want to download.</p>
             </div> */}
             
             <div className="search">
-              <input onChange={(evt) => setmediaUrl(evt.target.value)} value={mediaUrl} placeholder="Paste Link" className="text-gray-800 bg-transparent p-5 px-8 outline-none w-full" />
+              <input onChange={(evt) => setmediaUrl(evt.target.value)} value={mediaUrl} placeholder="Paste Link"
+                className="text-gray-800 border-none rounded h-[50px] sm:h-full p-2 px-2 outline-none w-full mb-3 sm:mb-0 sm:bg-transparent" />
               <button onClick={() => isVideo ? fetchVideo(mediaUrl) : fetchImages(mediaUrl)} className="button">{
                 fetchingMedia ? <SpinnerCircular color="white" thickness={ 200 } size={ 25 }/> : "King it Now"
               }</button>
