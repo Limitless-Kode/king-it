@@ -115,19 +115,22 @@ export default function Home() {
                   Download Kingschat And Yookos Videos And Images Faster.
                 </h1>
 
-                <p className="sm:text-sm text-xs text-gray-50 mb-8 mt-3">
+                <p className="sm:text-md text-lg text-gray-50 mb-12 mt-3">
                   The first of it&apos;s kind online tool that unlocks the possibility to download beautiful images and
                   videos from KingsChat and Yookos into your gallery and enjoy them offline.
             </p>
             
-             <div className={`switch mt-3 ${isVideo ? 'justify-end' : 'justify-start'}`} onClick={()=> setIsVideo(!isVideo)}>
-              <div className="switch_button">
-                {isVideo ? <HiOutlineVideoCamera /> : <BsImages />}
+            <div className="flex items-center mb-4">
+               <div className={`switch mr-2 ${isVideo ? 'justify-end' : 'justify-start'}`} onClick={()=> setIsVideo(!isVideo)}>
+                <div className="switch_button">
+                  {isVideo ? <HiOutlineVideoCamera /> : <BsImages />}
+                </div>
               </div>
+              <p className="text-white text-sm">Please switch to the file type you want to download.</p>
             </div>
-            <div className="text-white text-left mt-1 text-sm">
+            {/* <div className="text-white text-left mt-1 text-sm">
               <p>Please switch to the file type you want to download.</p>
-            </div>
+            </div> */}
             
             <div className="search">
               <input onChange={(evt) => setmediaUrl(evt.target.value)} value="https://" placeholder="Paste Link" className="text-gray-800 bg-transparent p-5 px-8 outline-none w-full" />
