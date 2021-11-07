@@ -131,7 +131,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="flex justify-center items-center flex-col text-center bg-blue-800 h-[100vh]">
+        <div className="flex justify-center items-center flex-col text-center bg-blue-800 min-h-[100vh]">
           <div className="navigation absolute top-3 left-3">
             <div><Image src={require("/public/images/logo.png")} height="60px" width="60" alt="Alt"/></div>
             </div>
