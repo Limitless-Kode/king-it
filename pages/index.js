@@ -22,7 +22,7 @@ export default function Home() {
     setfetchingMedia(true);
 
 
-    const request = await fetch('/api/media/getImage', {
+    const request = await fetch('https://kingitnow.com/api/getImage', {
       method: "POST",
       body: JSON.stringify({ "url": url }),
       headers: {
@@ -41,7 +41,7 @@ export default function Home() {
 
     setfetchingMedia(true);
     // 
-    const request = await fetch('/api/media/getVideo', {
+    const request = await fetch('https://kingitnow.com/api/getVideo', {
       method: "POST",
       body: JSON.stringify({ "url": url }),
       headers: {
