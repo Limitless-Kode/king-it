@@ -16,9 +16,20 @@ export default function Home() {
   const [isVideo, setIsVideo] = useState(false);
 
   const fetchImages = async (url) => {
+
+    const isMobileURL = url.search("kingsch.at");
+
+    if (isMobileURL >= 0) {
+      const postArray = url.split("/");
+      const postId = postArray[postArray.length - 1];
+
+      url = `https://kingschat.online/post/${postId}`;
+    }
+
     if (!(url.startsWith('https://') || url.startsWith('http://'))) {
       url = `https://${url}`;
     }
+
     setVideoFiles([]);
     if(mediaUrl.trim() == "") return;
 
