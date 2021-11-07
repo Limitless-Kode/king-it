@@ -16,6 +16,9 @@ export default function Home() {
   const [isVideo, setIsVideo] = useState(false);
 
   const fetchImages = async (url) => {
+    if (!(url.startsWith('https://') || url.startsWith('http://'))) {
+      url = `https://${url}`;
+    }
     setVideoFiles([]);
     if(mediaUrl.trim() == "") return;
 
@@ -37,6 +40,10 @@ export default function Home() {
 
   const fetchVideo = async (url) => {
     setimageFiles([]);
+    if (!(url.startsWith('https://') || url.startsWith('http://'))) {
+      url = `https://${url}`;
+    }
+    
     if(mediaUrl.trim() == "") return;
 
     setfetchingMedia(true);
@@ -114,7 +121,7 @@ export default function Home() {
                 </p>
             
             <div className="search">
-              <input onChange={(evt) => setmediaUrl(evt.target.value)} placeholder="Paste Link" className="text-gray-800 bg-transparent p-5 px-8 outline-none w-full" />
+              <input onChange={(evt) => setmediaUrl(evt.target.value)} value="https://" placeholder="Paste Link" className="text-gray-800 bg-transparent p-5 px-8 outline-none w-full" />
               <button onClick={() => isVideo ? fetchVideo(mediaUrl) : fetchImages(mediaUrl)} className="button">{
                 fetchingMedia ? <SpinnerCircular color="white" thickness={ 200 } size={ 25 }/> : "King it Now"
               }</button>
